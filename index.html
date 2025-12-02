@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financio App - Organize suas finanças</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', sans-serif; background-color: #f7f6f3; color: #2A2A2A; }
+    header { background: #fff; padding: 20px 50px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    header h1 { color: #D4AF37; font-size: 28px; font-weight: 700; }
+    nav a { margin-left: 20px; color: #2A2A2A; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+    nav a:hover { color: #D4AF37; }
+
+    .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 100px 20px; background: linear-gradient(to bottom right, #fff, #f0f0f0); }
+    .hero h2 { font-size: 40px; color: #D4AF37; margin-bottom: 20px; }
+    .hero p { font-size: 20px; margin-bottom: 30px; }
+    .hero .buttons { display: flex; gap: 20px; flex-wrap: wrap; }
+    .hero .buttons a { text-decoration: none; padding: 15px 30px; background: #D4AF37; color: #fff; font-weight: bold; border-radius: 10px; transition: all 0.3s; }
+    .hero .buttons a:hover { background: #b8942e; transform: translateY(-3px); }
+
+    .stats { display: flex; justify-content: space-around; flex-wrap: wrap; padding: 60px 20px; gap: 30px; }
+    .card { background: #fff; border-radius: 15px; padding: 30px; width: 250px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .card:hover { transform: translateY(-5px); }
+    .card i { font-size: 36px; color: #D4AF37; margin-bottom: 15px; }
+    .card h3 { font-size: 22px; margin-bottom: 10px; }
+    .card p { font-size: 16px; color: #555; }
+
+    footer { background: #2A2A2A; color: #fff; padding: 40px 20px; text-align: center; }
+    footer .socials a { color: #D4AF37; margin: 0 10px; font-size: 20px; transition: transform 0.3s; }
+    footer .socials a:hover { transform: scale(1.2); }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate { animation: fadeInUp 1s ease forwards; opacity: 0; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Financio</h1>
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#stats">Estatísticas</a>
+    <a href="#contact">Contato</a>
+  </nav>
+</header>
+
+<section class="hero" id="hero">
+  <h2 class="animate" style="animation-delay:0.2s">Controle total das suas finanças</h2>
+  <p class="animate" style="animation-delay:0.4s">Em breve disponível na App Store e Play Store. Baixe e organize seus gastos com facilidade!</p>
+  <div class="buttons animate" style="animation-delay:0.6s">
+    <a href="#">App Store</a>
+    <a href="#">Google Play</a>
+  </div>
+</section>
+
+<section class="stats" id="stats">
+  <div class="card animate" style="animation-delay:0.2s">
+    <i class="fas fa-wallet"></i>
+    <h3>Transações realizadas</h3>
+    <p>Mais de 50.000 transações monitoradas por mês</p>
+  </div>
+  <div class="card animate" style="animation-delay:0.4s">
+    <i class="fas fa-users"></i>
+    <h3>Usuários ativos</h3>
+    <p>Mais de 10.000 usuários controlando suas finanças</p>
+  </div>
+  <div class="card animate" style="animation-delay:0.6s">
+    <i class="fas fa-chart-line"></i>
+    <h3>Orçamento controlado</h3>
+    <p>Planeje e alcance suas metas financeiras</p>
+  </div>
+</section>
+
+<footer id="contact">
+  <p>Precisa de ajuda? <a href="https://wa.me/5538984156404" style="color:#D4AF37;text-decoration:none;">Fale conosco via WhatsApp</a></p>
+  <div class="socials">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+  <p style="margin-top:20px;">© 2025 Financio. Todos os direitos reservados.</p>
+  <p style="margin-top:5px; color:#aaa;">Versão 1.0.0</p>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('.animate').forEach((el) => {
+      const top = el.getBoundingClientRect().top;
+      const height = window.innerHeight;
+      if (top < height - 50) {
+        el.style.opacity = 1;
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
