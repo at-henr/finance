@@ -1,104 +1,226 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Financio App - Organize suas finanças</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Roboto', sans-serif; background-color: #f7f6f3; color: #2A2A2A; }
-    header { background: #fff; padding: 20px 50px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    header h1 { color: #D4AF37; font-size: 28px; font-weight: 700; }
-    nav a { margin-left: 20px; color: #2A2A2A; text-decoration: none; font-weight: 500; transition: color 0.3s; }
-    nav a:hover { color: #D4AF37; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financio | Controle Financeiro Inteligente</title>
 
-    .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 100px 20px; background: linear-gradient(to bottom right, #fff, #f0f0f0); }
-    .hero h2 { font-size: 40px; color: #D4AF37; margin-bottom: 20px; }
-    .hero p { font-size: 20px; margin-bottom: 30px; }
-    .hero .buttons { display: flex; gap: 20px; flex-wrap: wrap; }
-    .hero .buttons a { text-decoration: none; padding: 15px 30px; background: #D4AF37; color: #fff; font-weight: bold; border-radius: 10px; transition: all 0.3s; }
-    .hero .buttons a:hover { background: #b8942e; transform: translateY(-3px); }
+<link rel="icon" type="image/png" href="30.png">
+<meta name="description" content="Financio é o app de gestão financeira que transforma seu controle de gastos em decisões inteligentes. Acompanhe transações, orçamento, notificações e muito mais.">
+<meta name="keywords" content="Financio, finanças, app financeiro, controle de gastos, orçamento, transações, gerenciamento financeiro, Android, iOS">
 
-    .stats { display: flex; justify-content: space-around; flex-wrap: wrap; padding: 60px 20px; gap: 30px; }
-    .card { background: #fff; border-radius: 15px; padding: 30px; width: 250px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s; }
-    .card:hover { transform: translateY(-5px); }
-    .card i { font-size: 36px; color: #D4AF37; margin-bottom: 15px; }
-    .card h3 { font-size: 22px; margin-bottom: 10px; }
-    .card p { font-size: 16px; color: #555; }
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'financio-gold': '#D4AF37',
+        'financio-dark': '#2A2A2A',
+        'financio-bg': '#F7F6F3',
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
+    },
+  },
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-    footer { background: #2A2A2A; color: #fff; padding: 40px 20px; text-align: center; }
-    footer .socials a { color: #D4AF37; margin: 0 10px; font-size: 20px; transition: transform 0.3s; }
-    footer .socials a:hover { transform: scale(1.2); }
+html { scroll-behavior: smooth; }
 
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    .animate { animation: fadeInUp 1s ease forwards; opacity: 0; }
-  </style>
+.hero-background {
+  background: linear-gradient(180deg, rgba(42,42,42,1) 0%, rgba(212,175,55,0.1) 100%);
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+</style>
 </head>
-<body>
 
-<header>
-  <h1>Financio</h1>
-  <nav>
-    <a href="#hero">Home</a>
-    <a href="#stats">Estatísticas</a>
-    <a href="#contact">Contato</a>
-  </nav>
+<body class="bg-financio-bg font-sans antialiased">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-md">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="#" class="flex items-center space-x-2">
+        <img src="financio-icon.png" alt="Financio Logo" class="w-8 h-8 rounded-full shadow-md">
+        <span class="text-2xl font-bold text-financio-dark">Financio</span>
+      </a>
+      <nav class="hidden md:flex space-x-8 text-financio-dark font-medium">
+        <a href="#recursos" class="hover:text-financio-gold transition duration-150 ease-in-out">Recursos</a>
+        <a href="#estatisticas" class="hover:text-financio-gold transition duration-150 ease-in-out">Estatísticas</a>
+        <a href="#seguranca" class="hover:text-financio-gold transition duration-150 ease-in-out">Segurança</a>
+        <a href="#legal" class="hover:text-financio-gold transition duration-150 ease-in-out">Legal</a>
+        <a href="#apoio" class="hover:text-financio-gold transition duration-150 ease-in-out">Suporte</a>
+      </nav>
+      <a href="https://github.com/at-henr/finance/releases/download/1.0/app-financio.1.0.apk" class="hidden md:inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-financio-gold hover:bg-yellow-500 transition duration-150 ease-in-out shadow-lg">
+        Baixe Agora
+      </a>
+    </div>
+  </div>
 </header>
 
-<section class="hero" id="hero">
-  <h2 class="animate" style="animation-delay:0.2s">Controle total das suas finanças</h2>
-  <p class="animate" style="animation-delay:0.4s">Em breve disponível na App Store e Play Store. Baixe e organize seus gastos com facilidade!</p>
-  <div class="buttons animate" style="animation-delay:0.6s">
-    <a href="#">App Store</a>
-    <a href="#">Google Play</a>
+<!-- Hero -->
+<section class="hero-background text-white pt-20 pb-28 sm:pt-32 sm:pb-40 rounded-b-[40px] shadow-2xl">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
+      Controle suas finanças. <span class="text-financio-gold">De forma inteligente.</span>
+    </h1>
+    <p class="text-xl sm:text-2xl font-light mb-8 max-w-3xl mx-auto opacity-80">
+      Financio ajuda você a monitorar gastos, organizar orçamento, acompanhar transações e receber notificações importantes, tudo em um único app.
+    </p>
+
+    <a href="https://github.com/at-henr/finance/releases/download/1.0/app-financio.1.0.apk"
+       class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-lg font-bold rounded-lg text-financio-dark bg-financio-gold hover:bg-yellow-500 transition duration-150 ease-in-out shadow-xl transform hover:scale-105"
+       target="_blank" rel="noopener noreferrer">
+      Baixar App (Android)
+    </a>
+
+    <div class="mt-4 text-lg text-yellow-300 font-medium">
+      Em breve na Google Play Store e App Store!
+    </div>
+
+    <div class="mt-16 flex justify-center">
+      <div class="relative bg-financio-dark w-60 h-96 rounded-3xl shadow-2xl border-4 border-gray-600">
+        <div class="absolute inset-0 p-3 flex flex-col items-center justify-center space-y-4">
+          <img src="30.png" alt="Logo Financio" class="w-12 h-12 rounded-full mb-4">
+          <span class="text-financio-gold text-3xl font-bold">Financio App</span>
+          <div class="w-40 h-4 bg-financio-gold rounded-md animate-pulse-slow"></div>
+          <div class="w-40 h-2 bg-gray-500 rounded-md"></div>
+          <div class="w-40 h-2 bg-gray-500 rounded-md"></div>
+          <div class="mt-8 text-xs text-gray-400">Controle completo de suas finanças</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="stats" id="stats">
-  <div class="card animate" style="animation-delay:0.2s">
-    <i class="fas fa-wallet"></i>
-    <h3>Transações realizadas</h3>
-    <p>Mais de 50.000 transações monitoradas por mês</p>
-  </div>
-  <div class="card animate" style="animation-delay:0.4s">
-    <i class="fas fa-users"></i>
-    <h3>Usuários ativos</h3>
-    <p>Mais de 10.000 usuários controlando suas finanças</p>
-  </div>
-  <div class="card animate" style="animation-delay:0.6s">
-    <i class="fas fa-chart-line"></i>
-    <h3>Orçamento controlado</h3>
-    <p>Planeje e alcance suas metas financeiras</p>
+<!-- Recursos -->
+<section id="recursos" class="py-20 bg-financio-bg">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center mb-12 text-financio-dark">
+      O que o Financio oferece
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out border border-gray-100">
+        <div class="text-4xl text-financio-gold mb-4">💰</div>
+        <h3 class="text-xl font-semibold mb-3">Controle de Gastos</h3>
+        <p class="text-gray-600">Visualize todas suas transações de forma clara e categorizada para entender melhor seus gastos.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out border border-gray-100">
+        <div class="text-4xl text-financio-gold mb-4">📊</div>
+        <h3 class="text-xl font-semibold mb-3">Orçamento Mensal</h3>
+        <p class="text-gray-600">Defina seu orçamento e acompanhe quanto já foi gasto e quanto ainda pode usar.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out border border-gray-100">
+        <div class="text-4xl text-financio-gold mb-4">🔔</div>
+        <h3 class="text-xl font-semibold mb-3">Notificações Inteligentes</h3>
+        <p class="text-gray-600">Receba alertas importantes sobre gastos, limites e transações suspeitas.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<footer id="contact">
-  <p>Precisa de ajuda? <a href="https://wa.me/5538984156404" style="color:#D4AF37;text-decoration:none;">Fale conosco via WhatsApp</a></p>
-  <div class="socials">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
+<!-- Estatísticas -->
+<section id="estatisticas" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-extrabold text-center mb-12 text-financio-gold">
+      Visualize suas finanças com dados
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div class="p-6 rounded-xl shadow-xl border border-gray-100 bg-financio-bg">
+        <div class="text-5xl mb-4 text-financio-gold">📈</div>
+        <h3 class="text-xl font-semibold mb-3 text-financio-dark">Transações</h3>
+        <p class="text-gray-600">Tenha histórico detalhado de todas suas entradas e saídas.</p>
+      </div>
+
+      <div class="p-6 rounded-xl shadow-xl border border-gray-100 bg-financio-bg">
+        <div class="text-5xl mb-4 text-financio-gold">💳</div>
+        <h3 class="text-xl font-semibold mb-3 text-financio-dark">Categorias</h3>
+        <p class="text-gray-600">Organize suas despesas por categorias como alimentação, transporte e lazer.</p>
+      </div>
+
+      <div class="p-6 rounded-xl shadow-xl border border-gray-100 bg-financio-bg">
+        <div class="text-5xl mb-4 text-financio-gold">🏦</div>
+        <h3 class="text-xl font-semibold mb-3 text-financio-dark">Resumo Mensal</h3>
+        <p class="text-gray-600">Veja rapidamente quanto foi gasto, quanto sobrou e onde ajustar seu orçamento.</p>
+      </div>
+    </div>
   </div>
-  <p style="margin-top:20px;">© 2025 Financio. Todos os direitos reservados.</p>
-  <p style="margin-top:5px; color:#aaa;">Versão 1.0.0</p>
+</section>
+
+<!-- Segurança -->
+<section id="seguranca" class="py-20 bg-financio-bg">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl font-bold text-financio-dark mb-8">Segurança e Privacidade</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+        <div class="text-4xl text-financio-gold mb-4">🔒</div>
+        <h3 class="text-xl font-semibold mb-2">Biometria & PIN</h3>
+        <p class="text-gray-600">Proteja seu acesso com autenticação biométrica e PIN de segurança.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+        <div class="text-4xl text-financio-gold mb-4">🛡️</div>
+        <h3 class="text-xl font-semibold mb-2">Sessões Ativas</h3>
+        <p class="text-gray-600">Gerencie dispositivos conectados e termine sessões ativas quando necessário.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Legal -->
+<section id="legal" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center mb-12 text-financio-dark">Legal</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <a href="terms.html" class="block bg-financio-bg p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out border border-gray-100">
+        <div class="text-4xl text-financio-gold mb-4">📜</div>
+        <h3 class="text-xl font-semibold mb-2 text-financio-dark">Termos de Uso</h3>
+      </a>
+      <a href="privacy.html" class="block bg-financio-bg p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out border border-gray-100">
+        <div class="text-4xl text-financio-gold mb-4">🛡️</div>
+        <h3 class="text-xl font-semibold mb-2 text-financio-dark">Política de Privacidade</h3>
+      </a>
+      <div class="block bg-financio-bg p-6 rounded-xl shadow-lg border border-gray-100">
+        <div class="text-4xl text-financio-gold mb-4">📱</div>
+        <h3 class="text-xl font-semibold mb-2 text-financio-dark">Versão do App</h3>
+        <p class="text-gray-600">1.0.0</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Suporte / WhatsApp -->
+<section id="apoio" class="py-16 bg-financio-bg">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl font-bold mb-4 text-financio-dark">Precisa de ajuda?</h2>
+    <p class="text-gray-600 mb-8">Fale conosco pelo WhatsApp e receba suporte imediato.</p>
+    <a href="https://wa.me/5538984156404" target="_blank"
+       class="inline-flex items-center justify-center px-6 py-4 border border-transparent text-lg font-bold rounded-lg text-white bg-financio-gold hover:bg-yellow-500 transition duration-150 ease-in-out shadow-lg transform hover:scale-105">
+      💬 Abrir Chat no WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-financio-dark text-white py-8">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="text-sm text-gray-400 mb-2">
+      &copy; 2025 Financio. Todos os direitos reservados.
+    </p>
+    <p class="text-xs text-gray-500">
+      Versão: 1.0.0
+    </p>
+  </div>
 </footer>
-
-<script>
-  window.addEventListener('scroll', () => {
-    document.querySelectorAll('.animate').forEach((el) => {
-      const top = el.getBoundingClientRect().top;
-      const height = window.innerHeight;
-      if (top < height - 50) {
-        el.style.opacity = 1;
-      }
-    });
-  });
-</script>
 
 </body>
 </html>
