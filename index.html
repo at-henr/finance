@@ -4,296 +4,193 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Financio | Controle Financeiro Inteligente</title>
-
 <link rel="icon" type="image/png" href="financio.png">
-<meta name="description" content="Financio é o app de gestão financeira que transforma seu controle de gastos em decisões inteligentes. Acompanhe transações, orçamento, notificações e muito mais.">
-<meta name="keywords" content="Financio, finanças, app financeiro, controle de gastos, orçamento, transações, gerenciamento financeiro, Android, iOS, Open Finance">
-
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        'financio-gold': '#D4AF37',
-        'financio-dark': '#2A2A2A',
-        'financio-bg': '#F7F6F3',
-      },
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-      },
-    },
-  },
+  theme: {
+    extend: {
+      colors: {
+        'financio-gold': '#D4AF37',
+        'financio-dark': '#1f1f1f',
+        'financio-bg': '#F5F3EF',
+      },
+      fontFamily: { sans: ['Inter','sans-serif'] },
+    }
+  }
 }
 </script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
 html { scroll-behavior: smooth; }
-
-.hero-background {
-  background: linear-gradient(180deg, rgba(42,42,42,1) 0%, rgba(212,175,55,0.1) 100%);
-}
-
-.animate-pulse-slow {
-  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+.hero-bg {
+  background: linear-gradient(180deg, #1f1f1f 0%, rgba(212,175,55,0.15) 100%);
 }
 </style>
 </head>
+<body class="bg-financio-bg text-financio-dark font-sans antialiased">
 
-<body class="bg-financio-bg font-sans antialiased">
-
-<header class="sticky top-0 z-50 bg-white shadow-md">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <a href="#" class="flex items-center space-x-2">
-        <img src="financio.png" alt="Financio Logo" class="w-8 h-8 rounded-full shadow-md">
-        <span class="text-2xl font-bold text-financio-dark">Financio</span>
-      </a>
-      <nav class="hidden md:flex space-x-8 text-financio-dark font-medium">
-        <a href="#recursos" class="hover:text-financio-gold transition duration-150 ease-in-out">Vantagens</a>
-        <a href="#openfinance" class="hover:text-financio-gold transition duration-150 ease-in-out">Open Finance</a>
-        <a href="#premium" class="hover:text-financio-gold transition duration-150 ease-in-out">Premium</a>
-        <a href="#seguranca" class="hover:text-financio-gold transition duration-150 ease-in-out">Segurança</a>
-      </nav>
-      <div class="hidden md:flex space-x-4">
-                <a href="https://financio.fun/" class="inline-flex items-center justify-center px-4 py-2 border border-financio-gold text-sm font-medium rounded-lg text-financio-dark bg-white hover:bg-financio-bg transition duration-150 ease-in-out shadow-lg">
-          Entrar
-        </a>
-                <a href="https://github.com/at-henr/finance/releases/download/1.1.3/financio-release1.1.3.apk" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-financio-gold hover:bg-yellow-500 transition duration-150 ease-in-out shadow-lg">
-          Baixe Agora
-        </a>
-      </div>
-    </div>
-  </div>
+<header class="sticky top-0 z-50 bg-gradient-to-b from-white/10 via-white/5 to-transparent backdrop-blur-xl border-b border-white/10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="#" class="flex items-center space-x-2">
+        <img src="financio.png" alt="Financio Logo" class="w-8 h-8 shadow-md">
+        <span class="text-2xl font-bold text-financio-dark">Financio</span>
+      </a>
+      <nav class="hidden md:flex space-x-8 text-financio-dark font-medium">
+        <a href="#recursos" class="hover:text-financio-gold transition duration-150 ease-in-out">Vantagens</a>
+        <a href="#openfinance" class="hover:text-financio-gold transition duration-150 ease-in-out">Open Finance</a>
+        <a href="#premium" class="hover:text-financio-gold transition duration-150 ease-in-out">Premium</a>
+        <a href="#seguranca" class="hover:text-financio-gold transition duration-150 ease-in-out">Segurança</a>
+      </nav>
+      <div class="hidden md:flex space-x-4">
+        <a href="https://financio.fun/" class="inline-flex items-center justify-center px-4 py-2 border border-financio-gold text-sm font-medium rounded-lg text-financio-dark bg-white hover:bg-financio-bg transition duration-150 ease-in-out shadow-lg">Entrar</a>
+        <a href="https://github.com/at-henr/finance/releases/download/1.1.6/Financio-1.1.6-release.apk" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-financio-gold hover:bg-yellow-500 transition duration-150 ease-in-out shadow-lg">Baixe Agora</a>
+      </div>
+    </div>
+  </div>
 </header>
 
-<section class="hero-background text-white pt-20 pb-28 sm:pt-32 sm:pb-40 rounded-b-[40px] shadow-2xl">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
-      Controle suas finanças. <span class="text-financio-gold">De forma inteligente e segura.</span>
-    </h1>
-    <p class="text-xl sm:text-2xl font-light mb-8 max-w-3xl mx-auto opacity-80">
-      Financio transforma o caos financeiro em clareza, oferecendo controle de gastos, orçamentos e sincronização bancária via **Open Finance**.
-    </p>
+<section class="hero-bg text-white pt-28 pb-40 rounded-b-[50px] shadow-xl">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight">
+      Controle suas finanças com <span class="text-financio-gold">inteligência real</span>.
+    </h1>
 
-    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <a href="https://financio.fun/"
-         class="inline-flex items-center justify-center px-10 py-4 border border-financio-gold text-lg font-bold rounded-lg text-white bg-financio-dark hover:bg-gray-700 transition duration-150 ease-in-out shadow-xl transform hover:scale-105"
-         rel="noopener noreferrer">
-        Entrar (Web App)
-      </a>
-            <a href="https://github.com/at-henr/finance/releases/download/1.1.3/financio-release1.1.3.apk"
-         class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-lg font-bold rounded-lg text-financio-dark bg-financio-gold hover:bg-yellow-500 transition duration-150 ease-in-out shadow-xl transform hover:scale-105"
-         target="_blank" rel="noopener noreferrer">
-        Baixar App (Android)
-      </a>
-    </div>
+    <p class="text-xl opacity-90 mt-6 max-w-3xl mx-auto">
+      Organize suas despesas e acompanhe metas com <strong>Financio</strong>.
+    </p>
 
-    <div class="mt-4 text-lg text-yellow-300 font-medium">
-      Disponível para Web e Android. Em breve no iOS!
-    </div>
-
-    <div class="mt-16 flex justify-center">
-      <div class="relative bg-financio-dark w-60 h-96 rounded-3xl shadow-2xl border-4 border-gray-600">
-        <div class="absolute inset-0 p-3 flex flex-col items-center justify-center space-y-4">
-          <img src="financio.png" alt="Logo Financio" class="w-12 h-12 rounded-full mb-4">
-          <span class="text-financio-gold text-3xl font-bold">Financio App</span>
-          <div class="w-40 h-4 bg-financio-gold rounded-md animate-pulse-slow"></div>
-          <div class="w-40 h-2 bg-gray-500 rounded-md"></div>
-          <div class="w-40 h-2 bg-gray-500 rounded-md"></div>
-          <div class="mt-8 text-xs text-gray-400">Controle completo de suas finanças</div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+      <a href="https://financio.fun/" class="px-10 py-4 bg-white text-financio-dark font-bold rounded-xl shadow-lg hover:bg-financio-bg">Entrar Web</a>
+      <a href="https://github.com/at-henr/finance/releases/download/1.1.6/Financio-1.1.6-release.apk" class="px-10 py-4 bg-financio-gold text-white font-bold rounded-xl shadow-lg hover:bg-yellow-500">Baixar Android</a>
+    </div>
+    <div class="mt-14 flex justify-center">
+      <img src="inicio.png" alt="App Financio" class="w-80 sm:w-[420px] rounded-2xl shadow-2xl border border-black/10" />
+    </div>
+  </div>
 </section>
 
-<section id="recursos" class="py-20 bg-financio-bg">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-center mb-16 text-financio-dark">
-      Domine suas finanças com as vantagens do Financio
-    </h2>
+<section id="recursos" class="py-24">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-extrabold mb-14">Vantagens do Financio</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out border border-gray-100">
-        <div class="text-4xl text-financio-gold mb-4">💰</div>
-        <h3 class="text-xl font-semibold mb-3">Controle de Gastos e Extrato</h3>
-        <p class="text-gray-600">Registre manualmente ou importe transações automaticamente. Visualize seu extrato completo e saiba exatamente para onde seu dinheiro está indo com categorização inteligente.</p>
-      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+        <div class="text-5xl mb-4 text-financio-gold">💰</div>
+        <h3 class="text-xl font-semibold mb-2">Controle de Gastos</h3>
+        <p class="text-gray-600">Registre ou importe automaticamente suas transações e veja tudo categorizado.</p>
+      </div>
 
-      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out border border-gray-100">
-        <div class="text-4xl text-financio-gold mb-4">📊</div>
-        <h3 class="text-xl font-semibold mb-3">Orçamento e Metas</h3>
-        <p class="text-gray-600">Defina limites de gastos por mês e acompanhe o progresso em tempo real. O sistema avisa quando você atinge 90% do seu orçamento.</p>
-      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+        <div class="text-5xl mb-4 text-financio-gold">📊</div>
+        <h3 class="text-xl font-semibold mb-2">Orçamentos e Metas</h3>
+        <p class="text-gray-600">Defina metas e receba alertas automáticos quando estiver perto do limite.</p>
+      </div>
 
-      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out border border-gray-100">
-        <div class="text-4xl text-financio-gold mb-4">🔔</div>
-        <h3 class="text-xl font-semibold mb-3">Alerta de Desvios</h3>
-        <p class="text-gray-600">Receba notificações se o seu ritmo de gasto estiver acelerado (tendência de estouro antes do dia 15 do mês) ou se o limite for atingido.</p>
-      </div>
-    </div>
-  </div>
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+        <div class="text-5xl mb-4 text-financio-gold">🔔</div>
+        <h3 class="text-xl font-semibold mb-2">Alertas Inteligentes</h3>
+        <p class="text-gray-600">O app avisa quando seu gasto aumenta ou o orçamento está próximo do fim.</p>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<section id="openfinance" class="py-20 bg-white">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="md:flex md:items-center md:space-x-12">
-      <div class="md:w-1/2">
-        <h2 class="text-4xl font-extrabold mb-4 text-financio-gold">
-          Sincronização Inteligente (Open Finance)
-        </h2>
-        <p class="text-2xl font-light mb-6 text-financio-dark">
-          Diga adeus à digitação manual!
-        </p>
-        <p class="text-gray-600 mb-6">
-          O Financio se conecta com segurança ao seu banco (através de parceiros regulamentados) para importar automaticamente suas transações. Menos trabalho, mais precisão.
-        </p>
-        <ul class="space-y-3 text-gray-700 font-medium">
-          <li class="flex items-center space-x-2">
-            <span class="text-green-500">✓</span>
-            <span>Transações importadas automaticamente.</span>
-          </li>
-          <li class="flex items-center space-x-2">
-            <span class="text-green-500">✓</span>
-            <span>Conexão criptografada e segura.</span>
-          </li>
-          <li class="flex items-center space-x-2">
-            <span class="text-green-500">✓</span>
-            <span>Funciona com os maiores bancos do país.</span>
-          </li>
-        </ul>
-      </div>
-      <div class="md:w-1/2 mt-10 md:mt-0">
-        <div class="p-6 bg-financio-bg rounded-xl shadow-2xl border border-gray-100 text-center">
-          <span class="text-7xl">🏦</span>
-          <h4 class="text-xl font-semibold mt-4 text-financio-dark">Como funciona o Open Finance?</h4>
-          <p class="text-sm text-gray-500 mt-2">
-            Utilizamos APIs homologadas para ler o extrato. Sua senha bancária nunca é armazenada por nós ou nossos parceiros.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+<section id="openfinance" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6 md:flex items-center gap-16">
+
+    <div class="md:w-1/2">
+      <h2 class="text-4xl font-extrabold text-financio-gold mb-4">Open Finance Integrado</h2>
+      <p class="text-xl mb-6">Importe automaticamente todas suas transações bancárias com segurança total.</p>
+      <ul class="space-y-3 text-gray-700 font-medium">
+        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Importação automática</li>
+        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Conexão criptografada</li>
+        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Suporte aos principais bancos</li>
+      </ul>
+    </div>
+
+    <div class="md:w-1/2 mt-10 md:mt-0">
+      <div class="bg-financio-bg border border-gray-200 p-10 rounded-2xl shadow-xl text-center">
+        <div class="text-7xl mb-4">🏦</div>
+        <p class="text-gray-600">Seu banco conecta via API segura e homologada. Nenhuma senha é armazenada.</p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<section id="premium" class="py-20 bg-financio-bg">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl font-bold text-financio-dark mb-12">
-      Financio: Gratuito e Premium
-    </h2>
-    <p class="text-gray-600 mb-10 max-w-2xl mx-auto">
-      O controle básico é grátis para sempre. Assine o Premium para remover anúncios e liberar funcionalidades avançadas que te farão economizar ainda mais.
-    </p>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      
-            <div class="bg-white p-8 rounded-xl shadow-2xl border-2 border-gray-200">
-        <h3 class="text-2xl font-bold text-financio-dark mb-4">Plano Gratuito</h3>
-        <p class="text-4xl font-extrabold text-financio-gold mb-6">R$ 0,00</p>
-        <ul class="space-y-3 text-left text-gray-700">
-          <li class="flex items-center space-x-2"><span class="text-green-500">✓</span><span>Registro Manual de Transações</span></li>
-          <li class="flex items-center space-x-2"><span class="text-green-500">✓</span><span>Orçamento Mensal Básico</span></li>
-          <li class="flex items-center space-x-2"><span class="text-green-500">✓</span><span>Proteção por PIN/Biometria</span></li>
-          <li class="flex items-center space-x-2"><span class="text-red-500">✖</span><span>Sincronização Bancária Open Finance</span></li>
-          <li class="flex items-center space-x-2"><span class="text-red-500">✖</span><span>Relatórios Detalhados e Histórico Anual</span></li>
-          <li class="flex items-center space-x-2"><span class="text-red-500">✖</span><span>Sem anúncios</span></li>
-        </ul>
-      </div>
-      
-            <div class="bg-financio-dark p-8 rounded-xl shadow-2xl border-4 border-financio-gold transform scale-105">
-        <h3 class="text-2xl font-bold text-financio-gold mb-4">Plano Premium</h3>
-        <p class="text-4xl font-extrabold text-white mb-6">A partir de R$ 9,90/mês</p>
-        <ul class="space-y-3 text-left text-gray-200">
-          <li class="flex items-center space-x-2"><span class="text-green-500">✓</span><span>Tudo do plano Gratuito</span></li>
-          <li class="flex items-center space-x-2"><span class="text-green-500">✓</span><span>Sincronização Open Finance ILIMITADA</span></li>
-          <li class="flex items-center space-x-2"><span class="text-green-500">✓</span><span>Remoção completa de anúncios (Ad-Free)</span></li>
-          <li class="flex items-center space-x-2"><span class="text-green-500">✓</span><span>Gráficos e Relatórios Avançados (PDF/CSV)</span></li>
-          <li class="flex items-center space-x-2"><span class="text-green-500">✓</span><span>Prioridade no Suporte (WhatsApp)</span></li>
-          <li class="flex items-center space-x-2"><span class="text-green-500">✓</span><span>Acesso a recursos Beta exclusivos</span></li>
-        </ul>
-      </div>
-    </div>
-    
-    <a href="https://financio.fun/"
-       class="mt-10 inline-flex items-center justify-center px-8 py-3 border border-transparent text-lg font-bold rounded-lg text-financio-dark bg-financio-gold hover:bg-yellow-500 transition duration-150 ease-in-out shadow-lg transform hover:scale-105">
-      Começar Agora
-    </a>
-  </div>
+<section id="premium" class="py-24 bg-financio-bg">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+
+    <h2 class="text-4xl font-extrabold mb-10">Planos Disponíveis</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+      <div class="bg-white p-10 rounded-2xl border shadow-lg">
+        <h3 class="text-2xl font-bold mb-3">Plano Gratuito</h3>
+        <p class="text-4xl text-financio-gold font-extrabold mb-6">R$ 0,00</p>
+        <ul class="space-y-3 text-left text-gray-700">
+          <li>✓ Registro manual</li>
+          <li>✓ Orçamento básico</li>
+          <li>✖ Sem Open Finance</li>
+          <li>✖ Sem relatórios avançados</li>
+        </ul>
+      </div>
+
+      <div class="bg-financio-dark p-10 rounded-2xl border-4 border-financio-gold shadow-xl text-white scale-105">
+        <h3 class="text-2xl font-bold mb-3 text-financio-gold">Plano Premium</h3>
+        <p class="text-4xl font-extrabold mb-6">A partir de R$ 9,90/mês</p>
+        <ul class="space-y-3 text-left text-gray-100">
+          <li>✓ Tudo do gratuito</li>
+          <li>✓ Open Finance ilimitado</li>
+          <li>✓ Gráficos e relatórios</li>
+          <li>✓ Suporte prioritário</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <a href="https://financio.fun/" class="mt-10 inline-block px-10 py-4 bg-financio-gold text-white font-bold rounded-xl shadow-lg hover:bg-yellow-500">Começar Agora</a>
+
+  </div>
 </section>
 
+<section id="seguranca" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-extrabold mb-10">Segurança Avançada</h2>
 
-<section id="seguranca" class="py-20 bg-white">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl font-bold text-financio-dark mb-8">Nossa Garantia de Segurança e Confiança</h2>
-    <p class="text-gray-600 mb-10 max-w-3xl mx-auto">
-      Seus dados são o nosso ativo mais valioso. Usamos criptografia de ponta para proteger suas informações financeiras.
-    </p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="p-6 rounded-xl shadow-xl border border-gray-100 bg-financio-bg">
-        <div class="text-5xl mb-4 text-green-500">🔐</div>
-        <h3 class="text-xl font-semibold mb-3 text-financio-dark">Criptografia em Nuvem</h3>
-        <p class="text-gray-600">Todos os dados são armazenados na nuvem Firebase, um serviço globalmente reconhecido, com criptografia AES-256.</p>
-      </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-      <div class="p-6 rounded-xl shadow-xl border border-gray-100 bg-financio-bg">
-        <div class="text-5xl mb-4 text-financio-gold">🛡️</div>
-        <h3 class="text-xl font-semibold mb-3 text-financio-dark">Zero Acesso Bancário</h3>
-        <p class="text-gray-600">Sua senha do banco nunca passa por nossos servidores. A conexão Open Finance é feita diretamente com o parceiro homologado.</p>
-      </div>
+      <div class="bg-financio-bg p-8 rounded-2xl shadow border">
+        <div class="text-5xl mb-4 text-green-500">🔐</div>
+        <h3 class="text-xl font-semibold mb-2">Criptografia</h3>
+        <p class="text-gray-600">Dados protegidos com criptografia AES-256.</p>
+      </div>
 
-      <div class="p-6 rounded-xl shadow-xl border border-gray-100 bg-financio-bg">
-        <div class="text-5xl mb-4 text-blue-500">🔒</div>
-        <h3 class="text-xl font-semibold mb-3 text-financio-dark">PIN e Biometria Local</h3>
-        <p class="text-gray-600">Ninguém, além de você, acessa o app. O bloqueio é local (PIN ou Face ID/Touch ID) para máxima proteção.</p>
-      </div>
-    </div>
-  </div>
+      <div class="bg-financio-bg p-8 rounded-2xl shadow border">
+        <div class="text-5xl mb-4 text-financio-gold">🛡️</div>
+        <h3 class="text-xl font-semibold mb-2">Zero Acesso</h3>
+        <p class="text-gray-600">Sua senha bancária nunca passa pelos nossos servidores.</p>
+      </div>
+
+      <div class="bg-financio-bg p-8 rounded-2xl shadow border">
+        <div class="text-5xl mb-4 text-blue-500">🔒</div>
+        <h3 class="text-xl font-semibold mb-2">Biometria</h3>
+        <p class="text-gray-600">Desbloqueio seguro por PIN ou biometria.</p>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-
-<section id="legal" class="py-20 bg-financio-bg">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-center mb-12 text-financio-dark">Informações Legais</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-      <a href="terms.html" class="block bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out border border-gray-100">
-        <div class="text-4xl text-financio-gold mb-4">📜</div>
-        <h3 class="text-xl font-semibold mb-2 text-financio-dark">Termos de Uso</h3>
-      </a>
-      <a href="privacy.html" class="block bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out border border-gray-100">
-        <div class="text-4xl text-financio-gold mb-4">🛡️</div>
-        <h3 class="text-xl font-semibold mb-2 text-financio-dark">Política de Privacidade</h3>
-      </a>
-      <div class="block bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-        <div class="text-4xl text-financio-gold mb-4">📱</div>
-        <h3 class="text-xl font-semibold mb-2 text-financio-dark">FAQ</h3>
-        <p class="text-gray-600">Respostas às principais dúvidas sobre o app.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="apoio" class="py-16 bg-white">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl font-bold mb-4 text-financio-dark">Precisa de ajuda?</h2>
-    <p class="text-gray-600 mb-8">Fale conosco pelo WhatsApp e receba suporte imediato.</p>
-    <a href="https://wa.me/5538984156404" target="_blank"
-       class="inline-flex items-center justify-center px-6 py-4 border border-transparent text-lg font-bold rounded-lg text-white bg-financio-gold hover:bg-yellow-500 transition duration-150 ease-in-out shadow-lg transform hover:scale-105">
-      💬 Abrir Chat no WhatsApp
-    </a>
-  </div>
-</section>
-
-<footer class="bg-financio-dark text-white py-8">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <p class="text-sm text-gray-400 mb-2">
-      &copy; 2025 Financio. Todos os direitos reservados.
-    </p>
-    <p class="text-xs text-gray-500">
-      Versão: 1.1.6
-    </p>
-  </div>
+<footer class="bg-financio-dark text-white py-8 text-center">
+  <p class="text-gray-400">© 2025 Financio — Todos os direitos reservados.</p>
+  <p class="text-gray-500 text-xs mt-1">Desenvolvido com Buya Serviços Digitais</p>
 </footer>
+
+
 
 </body>
 </html>
