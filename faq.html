@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Central de Ajuda Financio</title>
+    <link rel="icon" type="image/png" href="financio.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'financio-gold': '#D4AF37',
+                'financio-dark': '#121212',
+                'financio-card': '#1f1f1f',
+              },
+              fontFamily: { sans: ['Inter','sans-serif'] },
+            }
+          }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+        html { scroll-behavior: smooth; }
+        body { background-color: #121212; color: white; }
+        .gold-gradient { background: linear-gradient(to right, #D4AF37, #FBF5B7, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .faq-card { background: #1f1f1f; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; }
+        .faq-card:hover { border-color: rgba(212, 175, 55, 0.3); }
+        details summary { list-style: none; outline: none; cursor: pointer; }
+        details summary::-webkit-details-marker { display: none; }
+        .category-title { border-left: 4px solid #D4AF37; padding-left: 15px; margin: 40px 0 20px 0; }
+    </style>
+</head>
+<body class="py-10">
+
+    <div class="max-w-4xl mx-auto px-6">
+        <a href="index.html" class="inline-flex items-center text-financio-gold font-bold text-xs uppercase tracking-widest hover:underline mb-10">
+            ← Voltar para a Home
+        </a>
+
+        <header class="text-center mb-16">
+            <h1 class="text-5xl font-black italic uppercase">Central de <span class="gold-gradient">Ajuda</span></h1>
+            <p class="text-gray-500 mt-4 italic">Tudo o que você precisa saber sobre o Financio em um só lugar.</p>
+            
+            <div class="mt-10 relative">
+                <input type="text" id="faqSearch" placeholder="Pesquisar dúvida (ex: Saldo, Pix, Segurança...)" 
+                class="w-full bg-[#1f1f1f] border border-white/10 rounded-2xl py-5 px-8 text-white focus:border-financio-gold outline-none transition shadow-2xl">
+            </div>
+        </header>
+
+        <div id="faqList">
+            
+            <h2 class="category-title text-financio-gold font-black text-xl uppercase italic">Entendendo o App</h2>
+            <div class="space-y-3 faq-group">
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">O que é o Saldo Atual? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">É o resultado de todas as suas receitas menos todas as suas despesas registradas, mostrando quanto dinheiro você tem disponível teoricamente.</p></details>
+                
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">Por que meu saldo está negativo? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">Isso acontece quando a soma das despesas supera a soma das receitas. Revise seus gastos para equilibrar as contas.</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">O que o gráfico de barras mostra? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">Ele compara visualmente suas receitas (verde) contra suas despesas (vermelho) ao longo dos últimos dias ou meses.</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">Como o app calcula meu Orçamento Mensal? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">O orçamento é um limite que você define manualmente. O app compara esse valor com o total de despesas do mês para te avisar se você estourou.</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">O que significa a barra de progresso no topo? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">Ela mostra a porcentagem do seu orçamento que já foi consumida. Se ficar vermelha, cuidado!</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">As transações de meses anteriores afetam o mês atual? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">Não. O painel principal foca no mês vigente para facilitar seu controle diário.</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">Posso ver o histórico de meses passados? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">Sim, acesse a área de 'Histórico' ou navegue pelas setas de data no topo.</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">O que é a tela de 'Conectar Banco'? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">É onde você usa o Open Finance para importar transações automaticamente, sem precisar digitar uma por uma.</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">Por que algumas transações automáticas demoram a aparecer? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">A sincronização depende do seu banco. Geralmente atualiza algumas vezes ao dia.</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">Para que serve a tela de Transações? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">É o extrato detalhado. Lá você pode editar, excluir ou categorizar cada gasto individualmente.</p></details>
+            </div>
+
+            <h2 class="category-title text-financio-gold font-black text-xl uppercase italic">Cálculos e Lógica</h2>
+            <div class="space-y-3 faq-group">
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">Como é calculado o total de despesas? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">Somamos todas as transações marcadas como 'Despesa' ou com valor negativo dentro do período selecionado.</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">Se eu parcelar uma compra, como aparece? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">Se for manual, você deve lançar o valor total ou lançar cada parcela mês a mês. No Open Finance, depende do banco.</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">O app considera juros de cartão? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">O app registra o valor final que você pagou. Se houve juros, lance o valor total pago na fatura.</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">Como funciona o cálculo de 'Tendência de Alta'? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">Se você gastar mais de 60% do seu orçamento antes do dia 15, o sistema entende que o ritmo está acelerado.</p></details>
+            </div>
+
+            <h2 class="category-title text-financio-gold font-black text-xl uppercase italic">Segurança e Dados</h2>
+            <div class="space-y-3 faq-group">
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">O app salva minha senha do banco? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">Nunca! A conexão bancária é feita por parceiros regulamentados e criptografados. Nós só recebemos o extrato.</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">Meus dados ficam salvos onde? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">Seus dados são salvos em nuvem segura (Firebase) atrelados ao seu usuário, protegidos por regras de segurança.</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">O que é o PIN de segurança? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">É uma senha de 4 dígitos exclusiva para abrir o app, impedindo que curiosos vejam suas finanças.</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">O app vende meus dados? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">Não. Seus dados financeiros são seus e são usados apenas para gerar seus gráficos.</p></details>
+            </div>
+
+            <h2 class="category-title text-financio-gold font-black text-xl uppercase italic">Educação Financeira</h2>
+            <div class="space-y-3 faq-group">
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">O que é a regra 50-30-20? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">Um método onde 50% da renda vai para necessidades, 30% para desejos e 20% para poupança/dívidas.</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">Como montar uma reserva de emergência? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">Tente guardar de 3 a 6 meses do seu custo de vida em uma conta com liquidez diária.</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">O que são 'gastos fantasmas'? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">Assinaturas que você não usa (streaming, academia) e taxas bancárias. Cancele o que não usa!</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">O que é inflação? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">É o aumento generalizado dos preços. Seu dinheiro vale menos com o tempo, por isso é importante investir.</p></details>
+            </div>
+
+            <h2 class="category-title text-financio-gold font-black text-xl uppercase italic">Premium e Suporte</h2>
+            <div class="space-y-3 faq-group">
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">Para que serve o Premium? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">Remove anúncios, libera sincronização bancária ilimitada e relatórios avançados.</p></details>
+
+                <details class="faq-card p-6 rounded-2xl group"><summary class="flex justify-between items-center font-bold italic">Como funciona o código promocional? <span class="text-financio-gold transition group-open:rotate-180">▼</span></summary>
+                <p class="mt-4 text-gray-400 text-sm italic">Se você tem um código, digite na área Premium. Ele libera acesso vitalício ou temporário.</p></details>
+            </div>
+
+            </div>
+
+        <footer class="mt-20 py-10 border-t border-white/10 text-center">
+            <img src="financio.png" alt="Logo" class="w-10 h-10 mx-auto mb-6">
+            <p class="text-gray-500 text-sm italic">© 2025 Financio — Tecnologia para sua liberdade.</p>
+            <p class="text-[10px] text-gray-600 mt-2 uppercase tracking-widest">Desenvolvido by Buya Serviços Digitais</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Script de busca inteligente
+        document.getElementById('faqSearch').addEventListener('input', function(e) {
+            const term = e.target.value.toLowerCase();
+            const details = document.querySelectorAll('details');
+            const categories = document.querySelectorAll('.category-title');
+
+            details.forEach(detail => {
+                const question = detail.querySelector('summary').innerText.toLowerCase();
+                const answer = detail.querySelector('p').innerText.toLowerCase();
+                
+                if (question.includes(term) || answer.includes(term)) {
+                    detail.style.display = "block";
+                } else {
+                    detail.style.display = "none";
+                }
+            });
+
+            // Esconde o título da categoria se não houver perguntas visíveis nela
+            categories.forEach(cat => {
+                let sibling = cat.nextElementSibling;
+                let hasVisible = false;
+                if(sibling && sibling.classList.contains('faq-group')){
+                    const children = sibling.querySelectorAll('details');
+                    children.forEach(child => {
+                        if(child.style.display !== "none") hasVisible = true;
+                    });
+                }
+                cat.style.display = hasVisible ? "block" : "none";
+            });
+        });
+    </script>
+</body>
+</html>

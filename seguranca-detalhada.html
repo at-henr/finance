@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança Bancária | Financio</title>
+    <link rel="icon" type="image/png" href="financio.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'financio-gold': '#D4AF37',
+                'financio-dark': '#121212',
+                'financio-card': '#1f1f1f',
+              },
+              fontFamily: { sans: ['Inter','sans-serif'] },
+            }
+          }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+        html { scroll-behavior: smooth; }
+        body { background-color: #121212; color: white; }
+        .gold-gradient { background: linear-gradient(to right, #D4AF37, #FBF5B7, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .security-card { background: #1f1f1f; border: 1px solid rgba(255,255,255,0.05); }
+        .glow-gold { box-shadow: 0 0 20px rgba(212, 175, 55, 0.1); }
+    </style>
+</head>
+<body class="py-10">
+    <div class="max-w-4xl mx-auto px-6">
+        <a href="index.html" class="inline-flex items-center text-financio-gold font-bold text-xs uppercase tracking-widest hover:underline mb-10">
+            ← Voltar para a Home
+        </a>
+
+        <header class="text-center mb-16">
+            <div class="inline-block p-6 bg-financio-gold/10 rounded-full mb-6 glow-gold">
+                <span class="text-4xl">🏛️</span>
+            </div>
+            <h1 class="text-4xl font-black italic uppercase tracking-tighter italic">Segurança <span class="gold-gradient">Nível Bancário</span></h1>
+            <p class="text-gray-500 mt-4 max-w-2xl mx-auto italic">Entenda como a Buya Serviços Digitais protege seu patrimônio e seus dados com as tecnologias mais avançadas do mercado.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+            
+            <div class="security-card p-8 rounded-[32px]">
+                <div class="text-3xl mb-4">🔐</div>
+                <h3 class="text-financio-gold font-black italic mb-3">AES-256 bits</h3>
+                <p class="text-gray-400 text-sm leading-relaxed italic">Utilizamos o mesmo padrão de criptografia dos maiores bancos do mundo. Seus dados são "embaralhados" antes de serem salvos, tornando-os ilegíveis para qualquer pessoa que não seja você.</p>
+            </div>
+
+            <div class="security-card p-8 rounded-[32px]">
+                <div class="text-3xl mb-4">📡</div>
+                <h3 class="text-financio-gold font-black italic mb-3">Protocolo TLS 1.3</h3>
+                <p class="text-gray-400 text-sm leading-relaxed italic">Toda comunicação entre o seu celular e nossos servidores (Firebase/Google Cloud) viaja através de túneis seguros e criptografados, impedindo ataques de interceptação.</p>
+            </div>
+
+            <div class="security-card p-8 rounded-[32px]">
+                <div class="text-3xl mb-4">👤</div>
+                <h3 class="text-financio-gold font-black italic mb-3">Proteção Biométrica</h3>
+                <p class="text-gray-400 text-sm leading-relaxed italic">O Financio não armazena sua digital ou rosto. Nós solicitamos a validação do sistema nativo do seu Android para garantir que apenas o dono do aparelho abra o app.</p>
+            </div>
+
+            <div class="security-card p-8 rounded-[32px]">
+                <div class="text-3xl mb-4">⌨️</div>
+                <h3 class="text-financio-gold font-black italic mb-3">PIN de Segurança</h3>
+                <p class="text-gray-400 text-sm leading-relaxed italic">Além da senha da conta, você pode configurar um código de 4 dígitos (PIN) exclusivo para o app, adicionando uma camada extra contra acesso físico não autorizado.</p>
+            </div>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-[40px] p-10 mb-16">
+            <h2 class="text-2xl font-black italic mb-6">Como tratamos o <span class="text-financio-gold">Open Finance?</span></h2>
+            <div class="space-y-6">
+                <div class="flex gap-4">
+                    <span class="text-green-500 font-bold">✓</span>
+                    <p class="text-gray-400 text-sm italic">Sem Senhas de Banco: Nós nunca pedimos ou armazenamos sua senha de acesso ao banco. A conexão é feita via Token de leitura oficial.</p>
+                </div>
+                <div class="flex gap-4">
+                    <span class="text-green-500 font-bold">✓</span>
+                    <p class="text-gray-400 text-sm italic">Apenas Leitura: Nosso acesso é estritamente limitado à leitura de transações. É impossível realizar transferências ou pagamentos através do Financio.</p>
+                </div>
+                <div class="flex gap-4">
+                    <span class="text-green-500 font-bold">✓</span>
+                    <p class="text-gray-400 text-sm italic">Parceiros Homologados: Trabalhamos apenas com integradores regulamentados pelo Banco Central do Brasil.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center italic text-gray-500 text-sm mb-20">
+            <p>Infraestrutura de dados processada em centros de dados de alta disponibilidade da <span class="text-white font-bold">Google Cloud Platform</span>.</p>
+        </div>
+
+        <footer class="py-10 border-t border-white/10 text-center italic">
+            <img src="financio.png" alt="Logo" class="w-10 h-10 mx-auto mb-6">
+            <p class="text-gray-400 text-sm">© 2025 Financio — Buya Serviços Digitais.</p>
+            <p class="text-[10px] text-gray-600 mt-2 uppercase tracking-widest font-black">Tecnologia, Produtividade e Segurança.</p>
+        </footer>
+    </div>
+</body>
+</html>

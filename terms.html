@@ -1,42 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Financio | Termos de Uso</title>
-<link rel="icon" type="image/png" href="financio-icon.png">
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-  body { font-family: 'Inter', sans-serif; background-color: #F7F6F3; color: #2A2A2A; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Uso | Financio</title>
+    <link rel="icon" type="image/png" href="financio.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'financio-gold': '#D4AF37',
+                'financio-dark': '#121212',
+                'financio-card': '#1f1f1f',
+              },
+              fontFamily: { sans: ['Inter','sans-serif'] },
+            }
+          }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+        html { scroll-behavior: smooth; }
+        body { background-color: #121212; color: white; }
+        .gold-gradient { background: linear-gradient(to right, #D4AF37, #FBF5B7, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .term-card { background: #1f1f1f; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
+        .term-card:hover { border-color: rgba(212, 175, 55, 0.3); }
+    </style>
 </head>
-<body>
+<body class="py-10">
+    <div class="max-w-3xl mx-auto px-6">
+        <a href="index.html" class="inline-flex items-center text-financio-gold font-bold text-xs uppercase tracking-widest hover:underline mb-10">
+            ← Voltar para a Home
+        </a>
 
-<header class="bg-white shadow-md sticky top-0 z-50">
-  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-    <a href="index.html" class="text-2xl font-bold text-financio-dark">Financio</a>
-    <a href="index.html" class="text-financio-gold font-semibold hover:underline">Voltar</a>
-  </div>
-</header>
+        <div class="text-center mb-12">
+            <div class="inline-block p-4 rounded-full bg-financio-gold/10 mb-4">
+                <span class="text-3xl text-financio-gold">⚖️</span>
+            </div>
+            <h1 class="text-4xl font-black italic uppercase">Termos de <span class="gold-gradient">Uso</span></h1>
+            <p class="text-gray-500 text-xs font-bold mt-2 uppercase tracking-widest">Última atualização: 25/12/2025</p>
+        </div>
 
-<main class="max-w-4xl mx-auto px-4 py-12">
-  <h1 class="text-3xl font-bold mb-6">Termos de Uso</h1>
-  <p class="mb-4">Bem-vindo ao Financio! Ao utilizar nosso aplicativo, você concorda com os seguintes termos:</p>
+        <div class="space-y-4">
+            <div class="term-card p-6 rounded-2xl">
+                <h3 class="text-financio-gold font-bold mb-3 flex items-center gap-3 italic text-lg">
+                    <span>✔️</span> 1. Aceitação dos Termos
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed italic">Ao baixar, instalar ou utilizar o aplicativo Financio, você concorda em cumprir e ficar vinculado a estes Termos de Uso. Se você não concordar com qualquer parte destes termos, você não deve utilizar o nosso serviço.</p>
+            </div>
 
-  <ul class="list-disc list-inside mb-4 space-y-2">
-    <li>O app é fornecido "como está", sem garantias de qualquer tipo.</li>
-    <li>Você é responsável pela segurança de seus dados e dispositivos.</li>
-    <li>Não nos responsabilizamos por perdas financeiras decorrentes do uso do app.</li>
-    <li>Reservamo-nos o direito de modificar funcionalidades e políticas a qualquer momento.</li>
-    <li>Uso do app implica concordância com todas as regras acima.</li>
-  </ul>
+            <div class="term-card p-6 rounded-2xl">
+                <h3 class="text-financio-gold font-bold mb-3 flex items-center gap-3 italic text-lg">
+                    <span>🛡️</span> 2. Isenção de Responsabilidade
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed italic">O Financio é uma ferramenta de organização e controle financeiro pessoal. As informações fornecidas não constituem aconselhamento financeiro, contábil ou jurídico. Não nos responsabilizamos por perdas financeiras decorrentes de decisões tomadas com base nos dados do app.</p>
+            </div>
 
-  <p class="mt-6">Para mais informações sobre nossa política de privacidade, acesse a <a href="privacy.html" class="text-financio-gold hover:underline">Política de Privacidade</a>.</p>
-</main>
+            <div class="term-card p-6 rounded-2xl">
+                <h3 class="text-financio-gold font-bold mb-3 flex items-center gap-3 italic text-lg">
+                    <span>🔒</span> 3. Privacidade e Dados (LGPD)
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed italic">Levamos sua privacidade a sério. Seus dados são armazenados de forma criptografada. Em conformidade com a LGPD, você tem o direito de solicitar a exclusão, alteração ou cópia dos seus dados a qualquer momento.</p>
+            </div>
 
-<footer class="bg-financio-dark text-white py-8 text-center">
-  <p class="text-sm text-gray-400">&copy; 2025 Financio. Todos os direitos reservados.</p>
-</footer>
+            <div class="term-card p-6 rounded-2xl">
+                <h3 class="text-financio-gold font-bold mb-3 flex items-center gap-3 italic text-lg">
+                    <span>🚫</span> 4. Uso Aceitável
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed italic">Você concorda em não utilizar o aplicativo para qualquer finalidade ilegal. É proibido tentar engenharia reversa, copiar o código-fonte ou explorar vulnerabilidades do sistema.</p>
+            </div>
 
+            <div class="term-card p-6 rounded-2xl">
+                <h3 class="text-financio-gold font-bold mb-3 flex items-center gap-3 italic text-lg">
+                    <span>©️</span> 5. Propriedade Intelectual
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed italic">Todo o design, logotipos, códigos e funcionalidades do Financio são de propriedade exclusiva da Buya Serviços Digitais. O uso não autorizado de nossa marca é estritamente proibido.</p>
+            </div>
+
+            <div class="term-card p-6 rounded-2xl">
+                <h3 class="text-financio-gold font-bold mb-3 flex items-center gap-3 italic text-lg">
+                    <span>🔄</span> 6. Alterações nos Termos
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed italic">Reservamo-nos o direito de modificar estes termos a qualquer momento. O uso contínuo após as alterações constitui aceitação dos novos termos.</p>
+            </div>
+
+            <div class="term-card p-6 rounded-2xl">
+                <h3 class="text-financio-gold font-bold mb-3 flex items-center gap-3 italic text-lg">
+                    <span>🎧</span> 7. Contato e Suporte
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed italic">Para dúvidas ou problemas técnicos, entre em contato com nossa equipe através do e-mail oficial ou aba de ajuda no app.</p>
+            </div>
+        </div>
+
+        <footer class="mt-20 py-10 border-t border-white/10 text-center">
+            <img src="financio.png" alt="Logo" class="w-10 h-10 mx-auto mb-6">
+            <p class="text-gray-500 text-sm italic">© 2025 Financio — Buya Serviços Digitais.</p>
+        </footer>
+    </div>
 </body>
 </html>

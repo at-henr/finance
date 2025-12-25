@@ -1,21 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Financio | Página Não Encontrada</title>
-<link rel="icon" type="image/png" href="financio-icon.png">
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-  body { font-family: 'Inter', sans-serif; background-color: #F7F6F3; color: #2A2A2A; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Página Não Encontrada</title>
+    <link rel="icon" type="image/png" href="financio.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'financio-gold': '#D4AF37',
+                'financio-dark': '#121212',
+              },
+              fontFamily: { sans: ['Inter','sans-serif'] },
+            }
+          }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+        body { background-color: #121212; color: white; overflow: hidden; }
+        .gold-gradient { background: linear-gradient(to right, #D4AF37, #FBF5B7, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow-404 { text-shadow: 0 0 30px rgba(212, 175, 55, 0.4); }
+        .hero-bg {
+          background: radial-gradient(circle at center, rgba(212,175,55,0.1) 0%, rgba(18,18,18,1) 70%);
+        }
+    </style>
 </head>
-<body class="flex flex-col justify-center items-center min-h-screen">
+<body class="flex flex-col justify-center items-center min-h-screen hero-bg px-6 text-center">
 
-<h1 class="text-6xl font-bold text-financio-gold mb-4">404</h1>
-<h2 class="text-3xl font-semibold mb-6 text-financio-dark">Página Não Encontrada</h2>
-<p class="text-gray-600 mb-8">Ops! Parece que você tentou acessar uma página que não existe.</p>
-<a href="index.html" class="px-6 py-3 bg-financio-gold text-financio-dark font-bold rounded-lg shadow-lg hover:bg-yellow-500 transition duration-150">Voltar para o Início</a>
+    <div class="relative mb-8">
+        <div class="absolute -inset-6 bg-financio-gold/20 blur-2xl rounded-full animate-pulse"></div>
+        <img src="financio.png" alt="Financio" class="relative w-24 h-24 grayscale opacity-50">
+    </div>
+
+    <h1 class="text-8xl sm:text-9xl font-black italic gold-gradient glow-404 mb-4 uppercase tracking-tighter">
+        404
+    </h1>
+
+    <h2 class="text-2xl sm:text-3xl font-bold mb-6 italic text-white uppercase tracking-widest">
+        Caminho <span class="text-financio-gold">Não Encontrado</span>
+    </h2>
+
+    <p class="text-gray-500 mb-10 max-w-md italic font-medium leading-relaxed">
+        Ops! Parece que essa página se perdeu no fluxo financeiro. O link pode ter expirado ou nunca existiu.
+    </p>
+
+    <a href="index.html" class="px-10 py-4 bg-financio-gold text-black font-black rounded-xl shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:scale-105 transition duration-300 uppercase italic">
+        Voltar para a Segurança
+    </a>
+
+    <footer class="absolute bottom-10 w-full text-center">
+        <p class="text-[10px] text-gray-700 uppercase tracking-[4px] font-black italic">
+            Buya Serviços Digitais — Protegendo sua Rota
+        </p>
+    </footer>
 
 </body>
 </html>

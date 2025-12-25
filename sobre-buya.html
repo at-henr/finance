@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos | Buya Serviços Digitais</title>
+    <link rel="icon" type="image/png" href="financio.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'financio-gold': '#D4AF37',
+                'financio-dark': '#121212',
+                'financio-card': '#1f1f1f',
+              },
+              fontFamily: { sans: ['Inter','sans-serif'] },
+            }
+          }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+        html { scroll-behavior: smooth; }
+        body { background-color: #121212; color: white; }
+        .gold-gradient { background: linear-gradient(to right, #D4AF37, #FBF5B7, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .about-card { background: #1f1f1f; border: 1px solid rgba(255,255,255,0.05); }
+    </style>
+</head>
+<body class="py-10">
+    <div class="max-w-4xl mx-auto px-6">
+        <a href="index.html" class="inline-flex items-center text-financio-gold font-bold text-xs uppercase tracking-widest hover:underline mb-10 italic">
+            ← Voltar para a Home
+        </a>
+
+        <header class="text-center mb-20">
+            <h1 class="text-5xl font-black italic uppercase tracking-tighter italic">BUYA <span class="gold-gradient">SERVIÇOS DIGITAIS</span></h1>
+            <p class="text-gray-400 mt-4 italic font-medium max-w-2xl mx-auto">Transformando a complexidade do dia a dia em soluções digitais simples, elegantes e automáticas.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20 items-center">
+            <div>
+                <h2 class="text-3xl font-black mb-6 italic italic uppercase"><span class="text-financio-gold">Inovação</span> Além das Finanças</h2>
+                <p class="text-gray-400 leading-relaxed italic mb-6">
+                    A Buya não é apenas a criadora do Financio. Somos uma desenvolvedora focada no ecossistema de <strong>produtividade e rotina</strong>. 
+                </p>
+                <p class="text-gray-400 leading-relaxed italic">
+                    Nossa missão é desenvolver aplicativos que removam o atrito das tarefas diárias. Do controle do seu dinheiro à gestão do seu tempo, nossos algoritmos trabalham em segundo plano para que você possa focar no que realmente importa: <strong>viver</strong>.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="about-card p-6 rounded-3xl text-center">
+                    <span class="text-3xl block mb-2">🚀</span>
+                    <p class="text-[10px] font-black uppercase text-financio-gold tracking-widest">Produtividade</p>
+                </div>
+                <div class="about-card p-6 rounded-3xl text-center">
+                    <span class="text-3xl block mb-2">📅</span>
+                    <p class="text-[10px] font-black uppercase text-financio-gold tracking-widest">Rotina</p>
+                </div>
+                <div class="about-card p-6 rounded-3xl text-center">
+                    <span class="text-3xl block mb-2">🤖</span>
+                    <p class="text-[10px] font-black uppercase text-financio-gold tracking-widest">Automação</p>
+                </div>
+                <div class="about-card p-6 rounded-3xl text-center">
+                    <span class="text-3xl block mb-2">💎</span>
+                    <p class="text-[10px] font-black uppercase text-financio-gold tracking-widest">Design Pro</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-[40px] p-10 text-center mb-20">
+            <h2 class="text-2xl font-black italic mb-6 italic underline decoration-financio-gold underline-offset-8">NOSSO MANIFESTO</h2>
+            <p class="text-gray-300 italic max-w-2xl mx-auto leading-relaxed">
+                "Acreditamos que a tecnologia deve ser invisível. Se você precisa gastar horas configurando uma ferramenta, ela falhou. Na Buya, criamos apps que 'simplesmente funcionam'. Seus dados são seus, sua rotina é sua, e nós somos apenas o motor que faz tudo rodar com mais velocidade."
+            </p>
+        </div>
+
+        <div class="text-center mb-20">
+            <h3 class="text-financio-gold font-black uppercase tracking-[5px] text-xs mb-10">Nosso Portfólio de Soluções</h3>
+            <div class="flex flex-wrap justify-center gap-8 opacity-60">
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl mb-2 flex items-center justify-center text-xl">💹</div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest">Financio</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl mb-2 flex items-center justify-center text-xl">⏱️</div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest">Rotina Pro</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl mb-2 flex items-center justify-center text-xl">📝</div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest">Task Master</span>
+                </div>
+            </div>
+        </div>
+
+        <footer class="py-10 border-t border-white/10 text-center">
+            <img src="financio.png" alt="Logo" class="w-10 h-10 mx-auto mb-6">
+            <p class="text-gray-500 text-sm italic">© 2025 Buya Serviços Digitais — Inteligência em cada bit.</p>
+        </footer>
+    </div>
+</body>
+</html>
