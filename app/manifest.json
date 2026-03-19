@@ -1,7 +1,7 @@
 {
     "name": "Financio | Controle Inteligente",
     "short_name": "Financio",
-    "start_url": "app.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#121212",
     "theme_color": "#D4AF37",
