@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "global_blacklist": [
+    "empréstimo", "pré-aprovado", "limite", "aumentou", "oferta",
+    "contrate", "cartão adicional", "convide", "indique", "novidade",
+    "fatura fechada", "bloqueado", "senha", "código", "token", "cashback",
+    "seguro", "consórcio", "investimento", "aplicação", "resgate",
+    "agendada", "agendamento", "negada", "recusada", "estorno", "cancelada",
+    "bem-vindo", "ativar", "atualize", "cadastro", "anuidade"
+  ],
+  "banks": {
+    "com.nu.production": {
+      "name": "Nubank",
+      "parsers": [
+        { "type": "expense", "regex": "(compra|aprovada|enviada|pagou|transferência).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(recebeu|recebida|devolvido).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "com.santander.app": {
+      "name": "Santander",
+      "parsers": [
+        { "type": "expense", "regex": "(compra|débito|pago).*?R\\$\\s*([\\d.,]+)"}
+      ]
+    },
+    "com.c6bank.app": {
+      "name": "C6 Bank",
+      "parsers": [
+        { "type": "expense", "regex": "(compra|aprovada|débito|realizada).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(recebido|pix|crédito).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "com.picpay": {
+      "name": "PicPay",
+      "parsers": [
+        { "type": "expense", "regex": "(pagou|pagamento|envio|você enviou).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(recebeu|recebimento).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "br.com.intermedium": {
+      "name": "Banco Inter",
+      "parsers": [
+        { "type": "expense", "regex": "(compra|realizada|enviado|débito).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(recebido|pix|caiu).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "br.com.bancopan": {
+      "name": "Banco Pan",
+      "parsers": [
+        { "type": "expense", "regex": "(compra|realizada|enviada).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(recebeu|disponível).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "com.itau.iti": {
+      "name": "iti Itaú",
+      "parsers": [
+        { "type": "expense", "regex": "(transferiu|pagou|compra|saída).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(recebeu|entrou|entrada).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "com.itaubb.myaccount": {
+      "name": "Itaú",
+      "parsers": [
+        { "type": "expense", "regex": "(compra|pagou|enviou|saída).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(recebeu|creditou|entrada).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "com.bradesco": {
+      "name": "Bradesco",
+      "parsers": [
+        { "type": "expense", "regex": "(débito|enviado|pago|transferência).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(crédito|recebido|entrada).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "br.com.bb.android": {
+      "name": "Banco do Brasil",
+      "parsers": [
+        { "type": "expense", "regex": "(compra|débito|transferência realizada|pagamento).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(recebido|crédito).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "br.gov.caixa": {
+      "name": "Caixa",
+      "parsers": [
+        { "type": "expense", "regex": "(aprovada|debitada|envio|saída).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(recebido|creditado|entrada).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "br.com.neon": {
+      "name": "Neon",
+      "parsers": [
+        { "type": "expense", "regex": "(compra|aprovada|enviou|pago).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(recebeu|chegou).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "br.com.bradesco.next": {
+      "name": "Next",
+      "parsers": [
+        { "type": "expense", "regex": "(compra|realizada|enviou).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(recebeu|crédito).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "br.com.uol.ps": {
+      "name": "PagBank",
+      "parsers": [
+        { "type": "expense", "regex": "(compra|pagou|enviou).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(venda|recebeu|adicionado|pix).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "com.mercadopago.wallet": {
+      "name": "Mercado Pago",
+      "parsers": [
+        { "type": "expense", "regex": "(pagou|compra|envio|você enviou).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(recebeu|entrou|dinheiro recebido).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "com.recarga.recarga": {
+      "name": "RecargaPay",
+      "parsers": [
+        { "type": "expense", "regex": "(pagamento|recarga|envio).*?confirmad[oa].*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(recebeu|adicionado|pix).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "com.taxis99": {
+      "name": "99Pay",
+      "parsers": [
+        { "type": "expense", "regex": "(pagou|pagamento|corrida).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(recebeu|adicionou|saldo).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "br.com.stone.ton": {
+      "name": "Ton",
+      "parsers": [
+        { "type": "expense", "regex": "(transferência|pagamento|enviado).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(venda|recebeu|saldo).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "br.com.banrisul.mobile": {
+      "name": "Banrisul",
+      "parsers": [
+        { "type": "expense", "regex": "(débito|compra|saída|pagamento).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(crédito|recebeu|entrada).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    },
+    "br.com.brb.mobile": {
+      "name": "BRB",
+      "parsers": [
+        { "type": "expense", "regex": "(compra|transferência|pagamento).*?R\\$\\s*([\\d.,]+)" },
+        { "type": "income", "regex": "(recebido|crédito).*?R\\$\\s*([\\d.,]+)" }
+      ]
+    }
+  }
+}
